@@ -1,0 +1,245 @@
+/* Shared archive layout. Content and reading controls remain in normal flow. */
+:root{--archive-border:#3d5868;--archive-copy:#c5d1d9;--archive-meta:#91a9b8;--archive-accent:#9cdee7}
+#main .section{padding-block:80px}
+#main .section-heading{margin-bottom:30px;padding-bottom:24px;border-bottom:1px solid var(--archive-border)}
+#main .section-heading:before{content:"";position:absolute;bottom:-1px;left:0;width:52px;height:2px;background:var(--archive-accent)}
+#main .section-heading:after{content:none}
+#main .section-heading .eyebrow{color:var(--archive-meta);font:12px/1.6 monospace;letter-spacing:.16em;margin:0 0 10px}
+#main .section-heading h2{font-size:clamp(30px,3.6vw,48px);letter-spacing:.07em;overflow-wrap:anywhere}
+#main .section-heading h2 span{font-size:15px;color:#aebfc9;letter-spacing:.08em}
+#main .section-note{font-size:16px;color:#adbec9;margin-top:14px}
+.header nav a:before{content:attr(data-index)}
+.header nav a{white-space:nowrap}
+#main .characters .section-heading>.text-link{margin-top:12px;font-size:15px}
+#main .character-tabs{margin-bottom:20px}
+#main .character-description,#main .character-detail,#main .relation-detail>p:not(.label),#main .relation-detail li p,#main .mecha p:not(.label),#main .database-layout>div>p:not(.database-intro),#main details p,#main .news-feature>p:not(.news-chapter){font-size:17px;line-height:2;color:var(--archive-copy)}
+#main .character-info .label,#main .character-info .roman{font-size:13px}
+#main .character-info .text-link,#main .news-actions .text-link,#main .news-actions .button{font-size:15px}
+#main .relation-detail li strong{font-size:16px}
+#main .news-row h3{font-size:16px;color:#d3dde3}
+#main .archive-note{font-size:14px;color:#a5b8c4}
+.news-feature,.character-panel,.mecha,.relation-map,.relation-detail{border-color:var(--archive-border)}
+.news-feature{min-height:0}
+.character-info{padding-block:26px}
+.character-info:before{margin-bottom:18px;padding-bottom:14px}
+.character-description{margin-top:22px}
+
+/* The two entrances appear before the full-width gallery visual. */
+#top.emblem-hero{height:auto;min-height:0;max-height:none;display:block}
+#top .emblem-center{padding:80px 4.2% 70px}
+.hero-intro{display:flex;align-items:center;justify-content:space-between;gap:35px;width:min(100%,1500px);margin:0 auto 28px;text-align:left}
+#top .emblem-kicker{font-size:12px;letter-spacing:.24em;color:#91b2c2;margin:0 0 10px}
+#top .top-question{font:clamp(24px,2.4vw,36px)/1.65 "Yu Mincho","Hiragino Mincho ProN",serif;letter-spacing:.09em;color:#e9eceb;margin:0}
+.hero-access{text-align:right}
+.hero-actions{display:flex;gap:12px}
+.hero-actions .button{min-width:190px;gap:28px;font-size:16px;min-height:56px;border-color:#648d9e;background:#102331}
+.hero-actions .button.light{background:#c7e9eb;color:#10232d;border-color:#c7e9eb}
+.hero-actions .button:hover{background:#234453}
+.hero-actions .button.light:hover{background:#e1fafb}
+#top .hero-news-link{font-size:14px;margin-top:16px;color:#afc6d1;border:0}
+#top .hero-slideshow{position:relative;border:1px solid #36525f;background:#070d14;padding:10px 10px 0}
+#top .hero-slideshow:before{content:"";position:absolute;top:-1px;left:-1px;width:44px;height:22px;border-top:2px solid #98d5df;border-left:2px solid #98d5df;pointer-events:none}
+#top .hero-slide-caption{text-align:left;margin:0;padding:12px 6px;color:#a8bdc9;font-size:14px}
+#top .emblem-subtitle{margin:15px 0 0;color:#7d97a8;font-size:11px}
+#top .hero-bottom{bottom:24px}
+
+/* Three records with a top-aligned command room image. */
+#story .story-layout{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:24px;align-items:start}
+.story-dossier{position:relative;background:linear-gradient(135deg,#142633,#0c1722);border:1px solid var(--archive-border);padding:30px;min-width:0}
+.story-dossier:before{content:"";position:absolute;top:-1px;left:-1px;width:28px;height:18px;border-top:1px solid #9ad4de;border-left:1px solid #9ad4de;pointer-events:none}
+#story .story-dossier .label{font:12px/1.6 monospace;letter-spacing:.16em;color:#93c4d2;margin:0 0 16px}
+.story-dossier h3{font:clamp(23px,2vw,30px)/1.7 "Yu Mincho","Hiragino Mincho ProN",serif;letter-spacing:.06em;color:#e7eff2;margin:0 0 20px}
+.story-dossier p:not(.label){font-size:17px;line-height:2;color:var(--archive-copy);margin:0 0 18px}
+.story-dossier p:last-child{margin-bottom:0}
+.story-dossier strong{font-weight:500;color:#e0edf1;overflow-wrap:anywhere}
+#story .story-image{order:0;align-self:start;padding:10px;margin:0;border:1px solid var(--archive-border);background:#0b1721}
+#story .story-image img{width:100%;height:auto;aspect-ratio:1672/941;object-fit:contain;filter:none}
+#story .story-image figcaption{color:#91adbd;font:11px/1.9 monospace;letter-spacing:.12em;padding:2px 7px 3px;overflow-wrap:anywhere}
+.story-organization,.story-prologue{grid-column:1/-1}
+.story-organization .dossier-heading{border-bottom:1px solid #385363;padding-bottom:20px;margin-bottom:24px;display:grid;grid-template-columns:1fr 1fr;gap:30px;align-items:start}
+.story-organization .dossier-heading h3{margin:0}
+.dossier-columns{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:40px}
+.story-prologue{display:grid;grid-template-columns:minmax(0,.7fr) minmax(0,1.3fr);gap:40px;background:linear-gradient(115deg,#1a2e39,#0c1722)}
+.story-prologue .prologue-status{font-size:14px;color:#a9c1ce;margin-bottom:22px}
+.story-prologue .button{font-size:16px;min-width:200px;background:#102633;border-color:#6896a8}
+.story-prologue .button:hover{background:#264653}
+.story-dossier .story-end{border-left:2px solid #8bbdc9;padding-left:20px;margin:24px 0;color:#e5eef2}
+
+/* An intercepted, wide-screen transmission with its close action always available. */
+#intrusion-dialog{width:1240px;max-width:94vw;max-height:92svh;padding:0;text-align:left;scrollbar-color:#765c90 #100c18;scrollbar-width:thin}
+.intrusion-toolbar{position:sticky;top:0;z-index:5;display:flex;align-items:center;justify-content:space-between;gap:16px;padding:12px 24px;background:#100c18f5;border-bottom:1px solid #715287;backdrop-filter:blur(14px)}
+.intrusion-toolbar .label{margin:0;font:11px/1.6 monospace;letter-spacing:.16em;color:#bfa3d0}
+#intrusion-dialog .close{position:static;flex-shrink:0;min-height:44px;padding:10px 14px;color:#e8d8f2;font-size:14px}
+.intrusion-layout{display:grid;grid-template-columns:minmax(0,.9fr) minmax(0,1.1fr);gap:46px;padding:36px}
+.intrusion-identity{text-align:center;position:sticky;top:100px;align-self:start;min-width:0}
+#intrusion-dialog .oblivion-emblem{display:block;width:min(100%,340px);height:auto;max-height:34svh;object-fit:contain;margin:0 auto 20px}
+#intrusion-dialog h2{font-size:clamp(32px,4.1vw,54px);letter-spacing:.12em}
+#intrusion-dialog .signal-jp{font-size:19px;line-height:1.8;margin:16px 0 26px;color:#d1c0df}
+#intrusion-dialog .signal-log{font-size:11px;letter-spacing:.04em;padding:18px 14px;overflow-wrap:anywhere}
+#intrusion-dialog .intrusion-note{font-size:12px;line-height:1.9;color:#af9fbd;margin:22px 0 0}
+#intrusion-dialog .oblivion-manifesto{margin:0;padding:0;border:0}
+#intrusion-dialog .oblivion-manifesto h3{font-size:clamp(24px,2.5vw,32px);line-height:1.75;margin:14px 0 24px}
+#intrusion-dialog .oblivion-manifesto .label{font-size:12px;line-height:1.8}
+#intrusion-dialog .oblivion-manifesto>p:not(.label),#intrusion-dialog .oblivion-invitation>p:not(.label){font-size:17px;line-height:2;color:#d3c8df}
+#intrusion-dialog .oblivion-invitation{margin-top:28px;padding:24px;border:1px solid #6b467f;border-left:2px solid #bb84de;background:linear-gradient(110deg,#6b3a8d30,#1e14282e)}
+#intrusion-dialog .oblivion-invitation p:first-child{margin-top:0}
+#intrusion-dialog .oblivion-invitation p:last-child{margin-bottom:0}
+#intrusion-dialog .oblivion-invitation strong{color:#efdcfc}
+#intrusion-dialog .intrusion-return{margin-top:26px;min-height:52px;font-size:15px;background:#21132f;border-color:#9e75b5;color:#eedff6}
+#intrusion-dialog .intrusion-return:hover{background:#382147}
+
+@media(min-width:1101px){#main .characters .section-heading>.text-link{position:absolute;right:0;bottom:24px;margin:0}}
+@media(min-width:701px) and (max-width:1350px){.header{gap:12px;padding-inline:3%}.header .brand{font-size:16px;gap:8px}.header .brand small{font-size:9px;letter-spacing:.04em}.header .brand-emblem{width:36px;height:36px}.header nav a{font-size:11px;padding-inline:8px;gap:5px;letter-spacing:.02em}.header nav{padding-inline:3px}}
+@media(min-width:701px) and (max-width:1000px){.hero-actions .button{min-width:165px;font-size:15px;gap:16px}}
+@media(max-width:900px){
+  .intrusion-layout{grid-template-columns:1fr;gap:30px;padding:28px}
+  .intrusion-identity{position:static}
+  #intrusion-dialog .oblivion-emblem{width:240px;max-height:30svh}
+  #intrusion-dialog .signal-log{max-width:480px;margin:auto}
+  #intrusion-dialog .oblivion-manifesto{border-top:1px solid #715287;padding-top:28px}
+  #story .story-layout{grid-template-columns:1fr}
+  #story .story-image{grid-row:2}
+  .story-organization .dossier-heading{display:block}
+  .story-organization .dossier-heading h3{margin-top:12px}
+  .dossier-columns{gap:26px}
+  .story-prologue{grid-template-columns:1fr;gap:26px}
+}
+@media(max-width:700px){
+  #main .section{padding:52px 6%}
+  .news-feature h3{font-size:clamp(24px,7vw,32px);letter-spacing:.02em}
+  #main .section-heading{padding-bottom:20px;margin-bottom:24px}
+  #main .section-heading h2{font-size:clamp(27px,7.6vw,34px);letter-spacing:.04em}
+  #main .section-heading h2 span{display:block;margin:10px 0 0;font-size:14px}
+  #main .section-heading .eyebrow{font-size:11px;letter-spacing:.09em}
+  #main .section-note{font-size:15px}
+  #main .character-tabs{margin-bottom:16px}
+  .header nav a:before{content:attr(data-index) " / ACCESS"}
+  #top .emblem-center{padding:70px 5% 68px}
+  #top .hero-top{left:5%;right:5%}
+  .hero-intro{display:block;margin-bottom:22px}
+  #top .top-question{font-size:clamp(22px,6.4vw,30px);letter-spacing:.06em}
+  .hero-access{text-align:left;margin-top:24px}
+  .hero-actions{gap:10px}
+  .hero-actions .button{min-width:0;flex:1;font-size:15px;padding:12px 14px;gap:12px;letter-spacing:.04em;min-height:52px}
+  #top .hero-news-link{font-size:13px;margin-top:12px}
+  #top .hero-slideshow{padding:5px 5px 0}
+  #top .hero-slide-caption{font-size:12px;padding:10px 5px;line-height:1.7}
+  #top .hero-bottom{left:5%;right:5%;font-size:10px;gap:8px}
+  #top .hero-bottom a{font-size:10px;letter-spacing:.04em}
+  .story-dossier{padding:24px 20px}
+  .story-dossier h3{font-size:24px;letter-spacing:.03em}
+  .dossier-columns{grid-template-columns:1fr;gap:20px}
+  .dossier-columns>div+div{padding-top:20px;border-top:1px solid #385363}
+  #intrusion-dialog{max-width:96vw;max-height:94svh}
+  .intrusion-toolbar{gap:10px;padding:10px 14px}
+  .intrusion-toolbar .label{font-size:10px;letter-spacing:.06em}
+  #intrusion-dialog .close{font-size:13px;padding:10px}
+  .intrusion-layout{padding:24px 20px}
+  #intrusion-dialog .oblivion-manifesto>p:not(.label),#intrusion-dialog .oblivion-invitation>p:not(.label){font-size:16px}
+  #intrusion-dialog .oblivion-invitation{padding:20px 16px}
+  #intrusion-dialog .intrusion-return{width:100%;gap:15px;font-size:14px;padding:14px 16px;letter-spacing:.04em}
+}
+@media(max-width:380px){.header .brand{font-size:16px;gap:8px}.header .brand small{font-size:9px;letter-spacing:.08em}.header .brand-emblem{width:32px;height:32px}.menu-toggle{gap:7px}.relation-person{width:76px}.hero-actions .button{font-size:14px;padding-inline:10px}.intrusion-toolbar .label{max-width:110px}}
+@media(min-width:701px) and (max-width:1000px){
+  html{scroll-padding-top:68px}
+  .header{height:68px;padding-inline:5%}
+  .menu-toggle{display:flex;align-items:center;gap:12px;padding:7px 12px;font:12px monospace;letter-spacing:.12em;border:1px solid #456b7c;background:#102431;color:#bce6ef}
+  .menu-toggle span{font-size:24px;color:#85d4e1}
+  .header nav{display:none;position:absolute;top:68px;left:0;right:0;flex-direction:column;padding:14px 6%;gap:7px;background:#0c131bf8;border-block:1px solid #3f6576}
+  .header nav.open{display:flex}
+  .header nav a{justify-content:space-between;padding:12px 15px;min-height:48px;font-size:15px;border:1px solid #39536380;background:#101f2a90}
+  .header nav a:before{content:attr(data-index) " / ACCESS";font-size:10px;order:2}
+}
+@media(min-width:701px) and (max-width:850px){
+  .hero-intro{align-items:flex-start;flex-direction:column;gap:20px}
+  .hero-access{text-align:left}
+}
+@media(min-width:901px) and (max-height:800px){.intrusion-identity{position:static}}
+
+/* The project title stays visible as the gallery changes. */
+#top .hero-titlebar{width:min(100%,1500px);display:flex;align-items:center;justify-content:space-between;gap:24px;padding:15px 22px;border:1px solid #36525f;border-bottom:0;background:linear-gradient(100deg,#152a36,#0c1721);text-align:left}
+#top .hero-titlebar h1{font:clamp(25px,2.2vw,34px)/1.5 "Yu Mincho","Hiragino Mincho ProN",serif;color:#e3edf0;letter-spacing:.12em;margin:0;padding:0}
+.hero-titlebar>span{font:11px/1.7 monospace;letter-spacing:.14em;color:#94b0c0}
+
+/* Display the front view from the supplied three-view sheet without altering it. */
+#character .character-panel{grid-template-columns:minmax(0,.9fr) minmax(0,1.1fr);align-items:stretch}
+#character .character-art{display:flex;align-items:center;justify-content:center;padding:38px 22px 32px;background:#dfe7e8}
+#character .character-art:before{content:"PERSONNEL ARCHIVE / FRONT VIEW";color:#4b6472}
+#character .character-art>span{color:#4b6472}
+.portrait-window{position:relative;overflow:hidden;width:min(100%,316px);aspect-ratio:540/1024;flex-shrink:0}
+#character-image{position:absolute;top:0;left:-9.25926%;width:auto;height:100%;max-width:none;aspect-ratio:auto;object-fit:fill;mix-blend-mode:multiply}
+#character .character-info{display:flex;flex-direction:column;justify-content:center;padding:36px 44px}
+#character .character-info .text-link{align-self:flex-start}
+.character-design-dialog img{background:#e1e7e8}
+.character-design-dialog p{padding-top:12px;border-top:1px solid #3b5360;color:#c6d8df;letter-spacing:.08em}
+
+/* Relationship names remain visible; one detailed record opens at a time. */
+#relationships .relation-layout{align-items:start}
+#relationships .relation-detail{min-height:0}
+#relationships .relation-person{width:140px;min-height:90px;padding:10px 7px}
+#relationships .relation-person small{word-break:keep-all;overflow-wrap:normal;line-height:1.65}
+#relationships .relation-hint{font-size:14px!important;color:#92b6c7!important;border-left:1px solid #6d9aab;padding-left:12px;margin-top:20px}
+#relationships #relation-list{margin-top:22px}
+#relationships #relation-list>li{padding:0;border:0}
+#relationships #relation-list details{border:1px solid #3a5667;border-bottom:0;background:#0d1a25}
+#relationships #relation-list>li:last-child details{border-bottom:1px solid #3a5667}
+#relationships #relation-list summary{display:grid;grid-template-columns:minmax(0,1fr) 24px;gap:5px 14px;padding:17px 18px;min-height:78px;line-height:1.7}
+#relationships #relation-list summary:hover{background:#1d3442}
+#relationships #relation-list summary:focus-visible{outline:2px solid #a4dce5;outline-offset:-3px}
+#relationships #relation-list .relation-partner{grid-column:1;grid-row:1;font:13px/1.7 "Yu Gothic",sans-serif;color:#adbfcb}
+#relationships #relation-list strong{grid-column:1;grid-row:2;display:block;font-size:16px;line-height:1.7;font-weight:500}
+#relationships #relation-list summary i{grid-column:2;grid-row:1/3;margin:0;font:22px/1 monospace;color:#9ecad8}
+#relationships #relation-list details[open]{background:#152937;border-color:#779dac}
+#relationships #relation-list details[open] summary{border-bottom:1px solid #3a5667}
+#relationships #relation-list details p{padding:20px 18px;margin:0;font-size:17px;line-height:2;color:#c5d1d9}
+@media(max-width:1100px) and (min-width:701px){#character .character-info{padding:26px}.portrait-window{width:min(100%,290px)}}
+@media(max-width:700px){
+  #top .hero-titlebar{padding:13px 14px;gap:8px;align-items:flex-start;flex-direction:column}
+  #top .hero-titlebar h1{font-size:27px;letter-spacing:.08em}
+  .hero-titlebar>span{font-size:10px;letter-spacing:.08em}
+  #character .character-panel{grid-template-columns:1fr}
+  #character .character-art{padding:37px 14px 30px}
+  .portrait-window{width:min(100%,270px)}
+  #character .character-info{padding:28px 14px 16px}
+}
+@media(max-width:600px){#relationships .relation-person{width:84px;min-height:86px;padding:9px 3px}#relationships .relation-person b{font-size:16px}#relationships .relation-person small{font-size:11px}#relationships #relation-list summary{padding:15px 13px}#relationships #relation-list details p{padding:18px 14px}}
+@media(max-width:380px){#relationships .relation-person{width:76px}.hero-titlebar>span{font-size:9px}}
+
+/* Keep labels separate from the relationship plot on small screens. */
+.relation-map-heading{display:contents}
+.relation-stage{position:absolute;inset:0}
+@media(max-width:1000px){
+  .header{gap:12px}
+  .header .brand{min-width:0;font-size:17px;gap:9px}
+  .header .brand>span{min-width:0}
+  .header .brand small{font-size:9px;letter-spacing:.07em}
+  .header .brand-emblem{width:34px;height:34px;flex-shrink:0}
+  .header .menu-toggle{flex-shrink:0;min-width:80px;min-height:44px;justify-content:space-between;gap:10px}
+  .header nav{max-height:calc(100svh - 68px);overflow-y:auto;overscroll-behavior:contain;background:#0c151f;box-shadow:0 14px 30px #0008}
+}
+@media(max-width:420px){.header .brand{font-size:16px;letter-spacing:.1em}.header .brand small{display:none}.header .brand-emblem{width:32px;height:32px}}
+@media(min-width:601px) and (max-width:1100px){#relationships .relation-person{width:clamp(100px,15vw,140px)}}
+@media(max-width:600px){
+  #relationships .relation-map{height:auto}
+  .relation-map-heading{display:grid;grid-template-columns:minmax(0,1.5fr) minmax(0,1fr);gap:18px;padding:18px 14px 0}
+  #relationships .relation-faction{position:static;min-width:0}
+  #relationships .relation-faction small{max-width:none;font-size:11px;line-height:1.8}
+  .relation-stage{position:relative;inset:auto;height:540px}
+  #relationships .relation-detail{padding:22px 16px}
+  .lightbox .close{min-height:44px;min-width:44px}
+}
+
+/* Relationship details are opt-in; every fresh page starts protected. */
+#relationships .relation-spoiler-control{display:flex;align-items:center;gap:20px;padding:18px 20px;margin:0 0 24px;border:1px solid #456472;background:#10222e}
+#relation-spoiler-toggle{display:inline-flex;align-items:center;justify-content:center;gap:12px;min-height:48px;flex-shrink:0;padding:12px 18px;border:1px solid #88c9d5;background:#183a47;color:#e1f3f6;font:600 15px/1.5 "Yu Gothic",sans-serif;cursor:pointer}
+#relation-spoiler-toggle:hover{background:#245264}
+#relation-spoiler-toggle:focus-visible{outline:2px solid #e3f7ff;outline-offset:4px}
+#relation-spoiler-toggle:disabled{opacity:.5;cursor:default}
+#relation-spoiler-state{min-width:3ch;font:700 14px/1.5 monospace;letter-spacing:.07em}
+.relation-spoiler-indicator{width:8px;height:8px;border-radius:50%;background:#a3e5df;box-shadow:0 0 8px #a3e5df55}
+#relation-spoiler-toggle[aria-checked="false"]{border-color:#da9aa9;background:#38232d;color:#ffdae4}
+#relation-spoiler-toggle[aria-checked="false"]:hover{background:#4b303d}
+#relation-spoiler-toggle[aria-checked="false"] .relation-spoiler-indicator{background:#e3a5b5;box-shadow:none}
+#relationships #relation-spoiler-note{margin:0;color:#bdd0dc;font-size:14px;line-height:1.9}
+#relation-unknown-legend[hidden]{display:none}
+@media(max-width:600px){#relationships .relation-spoiler-control{flex-direction:column;align-items:stretch;gap:12px;padding:16px 14px}#relation-spoiler-toggle{width:100%}}

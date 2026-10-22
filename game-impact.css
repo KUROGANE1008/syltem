@@ -1,0 +1,115 @@
+/* Game presentation / v0.99. Keep the artwork and screenshots intact. */
+.game-page.site-refresh .game-hero-impact{position:relative;display:block;isolation:isolate;margin-inline:calc(-100% / 18);padding:0;background:#080e15;border-bottom:1px solid #4b6370}
+.game-hero-impact .game-hero-status{position:absolute;top:25px;left:5%;right:5%;z-index:2;display:flex;justify-content:space-between;align-items:center;gap:20px}
+.game-hero-status>p{font:600 13px/1.5 var(--ui-display);letter-spacing:.16em;margin:0;color:#e3f4f8;text-shadow:0 2px 8px #000}
+.game-hero-status .game-badges{padding:7px 12px;background:#08131be8;border:1px solid #526772;color:#d3e6e9}
+.game-page.site-refresh .game-hero-impact .game-hero-visual{margin:0;padding:0;border:0;background:none;box-shadow:none;position:relative;width:100%}
+.game-hero-impact .game-hero-visual:before{display:none}
+.game-hero-impact .game-hero-visual:after{content:"";position:absolute;inset:0;pointer-events:none;background:linear-gradient(180deg,#050c1580,transparent 18%,transparent 43%,#080e1566 65%,#080e15 100%)}
+.game-hero-impact .game-hero-visual img{width:100%;aspect-ratio:1672/941;object-fit:contain}
+.game-hero-impact .game-hero-visual figcaption{position:absolute;right:5%;top:71px;z-index:1;font:500 11px/1.5 var(--ui-display);letter-spacing:.12em;color:#adc2ca;padding:0;text-shadow:0 2px 8px #000}
+.game-page.site-refresh .game-hero-impact .game-hero-copy{display:grid;grid-template-columns:1.1fr 1fr;align-items:end;gap:5%;max-width:none;position:relative;z-index:1;margin-top:clamp(-245px,-17vw,-150px);padding:0 5% 34px}
+.game-page.site-refresh .game-hero-impact .game-series{font:600 clamp(17px,1.7vw,24px)/1.6 var(--ui-body);letter-spacing:.22em;margin:0 0 13px;color:#f2f6f7}
+.game-page.site-refresh .game-hero-impact h1{font:700 clamp(64px,7.2vw,108px)/.88 var(--ui-display);letter-spacing:.015em;margin:0;color:#f1f6f7;text-shadow:0 4px 30px #0009}
+.game-hero-impact .game-genre{font:600 11px/1.7 var(--ui-display);letter-spacing:.22em;color:#8ab9c8;margin:23px 0 0}
+.game-page.site-refresh .game-hero-impact .game-catch{font:600 clamp(25px,3vw,42px)/1.5 var(--ui-body);letter-spacing:.05em;margin:0 0 19px;color:#e4cf9f;text-shadow:0 2px 14px #000}
+.game-page.site-refresh .game-hero-impact .game-catch br{display:block}
+.game-page.site-refresh .game-hero-impact .game-lead{font-size:16px;line-height:1.95;margin:0 0 24px;color:#c3d4dc}
+.game-hero-impact .game-actions{display:flex;gap:10px;flex-wrap:wrap}
+.game-hero-impact .game-button{font-size:14px;padding:12px 16px;gap:20px;min-height:50px}
+.game-hero-footer{margin:0 5%;padding:19px 0;display:flex;align-items:center;justify-content:space-between;gap:20px;border-top:1px solid #536a7566}
+.game-hero-footer>span{font:600 12px/1.7 var(--ui-display);letter-spacing:.12em;color:#87a9b9}
+.game-hero-footer strong{color:#d7e5e8;font-size:17px;margin-left:12px}
+.game-hero-footer>a{font-size:14px;color:#d6dfd0;min-height:44px;display:inline-flex;align-items:center;gap:25px;border-bottom:1px solid #7a735f}
+.game-hero-footer>a:hover{color:#ffe0a3;border-color:#ffe0a3}
+.game-page.site-refresh .game-spec-strip{margin-top:28px;background:#0f1c25}
+.game-page.site-refresh .game-section-nav{gap:0;border-bottom:1px solid #344955;padding-top:26px;padding-bottom:0}
+.game-page.site-refresh .game-section-nav a{border:0;border-bottom:2px solid transparent;background:transparent;padding:14px 17px;color:#b5c7d0}
+.game-page.site-refresh .game-section-nav a:hover,.game-page.site-refresh .game-section-nav a[aria-current]{background:#172b37;border-bottom-color:#afdfdf;color:#f0faf9}
+.game-showcase-heading{display:flex;justify-content:space-between;gap:30px;align-items:flex-end;margin-bottom:34px}
+.game-showcase-heading h2{font:600 clamp(29px,3.7vw,47px)/1.55 var(--ui-body);letter-spacing:.06em;margin:8px 0 0;color:#ecf3f6}
+.game-showcase-heading>p{margin:0 0 7px;color:#a9c2ce;font-size:16px;line-height:1.95}
+.game-shot-tabs{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:1px;border:1px solid #49616d;background:#49616d}
+.game-shot-tabs[hidden],.game-shot-panel[hidden]{display:none}
+.game-shot-tabs button{min-width:0;display:flex;flex-direction:column;gap:7px;align-items:flex-start;padding:17px 24px;min-height:84px;color:#a9c3cf;background:#101e29;font:600 18px/1.5 var(--ui-body);border:0;border-bottom:3px solid transparent;cursor:pointer}
+.game-shot-tabs button span{font:600 12px/1.4 var(--ui-display);letter-spacing:.12em;color:#82adbc}
+.game-shot-tabs button:hover{background:#1d3746;color:#f0fafa}
+.game-shot-tabs button[aria-selected="true"]{background:#223e4c;color:#f0fafb;border-bottom-color:#c6dfd9}
+.game-shot-tabs button[aria-selected="true"] span{color:#e3cf9f}
+.game-shot-tabs button:focus-visible{outline:3px solid #a5ebe9;outline-offset:-5px}
+.game-shot-panel{border:1px solid #49616d;border-top:0;background:#0a141d;min-width:0}
+.game-shot-panel+.game-shot-panel{margin-top:20px}
+.game-showcase.is-enhanced .game-shot-panel{margin-top:0}
+.game-shot-image{position:relative;display:block;padding:12px;background:#060f18}
+.game-shot-image img{width:100%;height:auto;aspect-ratio:16/9;object-fit:contain}
+.game-image-open{position:absolute;right:24px;bottom:22px;display:flex;align-items:center;justify-content:center;min-height:44px;padding:10px 16px;background:#0b1a25ed;border:1px solid #8aafba;font:500 13px/1.5 var(--ui-body);color:#deeff1;box-shadow:0 4px 20px #0006}
+.game-shot-image:hover .game-image-open{background:#b4dfe1;color:#122b34;border-color:#d8ffff}
+.game-shot-image:focus-visible{outline:3px solid #a5ebe9;outline-offset:-4px}
+.game-shot-panel figcaption{padding:25px 30px 29px;display:flex;justify-content:space-between;gap:24px;align-items:center;background:linear-gradient(115deg,#172d3a,#0e1d2a)}
+.game-shot-panel figcaption .eyebrow{font:600 12px/1.5 var(--ui-display);letter-spacing:.15em;color:#c7bc96;margin:0 0 9px}
+.game-shot-panel h3{font:600 clamp(20px,2vw,28px)/1.6 var(--ui-body);letter-spacing:.025em;margin:0 0 9px}
+.game-shot-panel figcaption p:not(.eyebrow){color:#adc5d0;font-size:15px;line-height:1.9;margin:0}
+.game-shot-detail{display:inline-flex;align-items:center;justify-content:space-between;gap:22px;min-height:48px;flex-shrink:0;color:#d2e8ea;border-bottom:1px solid #83a3ad;font-size:14px}
+.game-shot-detail:hover{color:#fff;border-color:#d0ffff}
+.game-page.site-refresh .game-section-heading h2{font-size:clamp(28px,3.1vw,42px);line-height:1.6}
+.game-page.site-refresh #features .game-features article{border-top-color:#a29879;background:linear-gradient(140deg,#1a303c,#0c1720)}
+.game-armory-update{margin-top:45px;border-top:1px solid #6a7869;padding-top:35px}
+.game-armory-copy{display:grid;grid-template-columns:1fr 1fr;gap:14px 50px;align-items:start;margin-bottom:28px}
+.game-armory-copy .eyebrow{grid-column:1/-1;margin:0;color:#d9c697}
+.game-armory-copy h3{font:600 clamp(25px,3vw,38px)/1.6 var(--ui-body);margin:0;letter-spacing:.04em}
+.game-armory-copy>p:not(.eyebrow){font-size:16px;color:#bdd0da;line-height:1.95;margin:0}
+.game-armory-copy .game-system-tags{grid-column:1/-1;margin:8px 0 0}
+.game-page.site-refresh .game-log .game-number{color:#d5c391}
+@media(max-width:1000px){
+ .game-page.site-refresh .game-hero-impact .game-hero-copy{margin-top:-15vw;grid-template-columns:1fr 1fr;gap:4%}
+ .game-page.site-refresh .game-hero-impact h1{font-size:clamp(53px,8vw,80px)}
+ .game-page.site-refresh .game-hero-impact .game-catch{font-size:28px}
+ .game-hero-impact .game-button{font-size:13px;padding:12px;gap:10px}
+ .game-hero-impact .game-actions{display:grid;grid-template-columns:1fr}
+ .game-showcase-heading{gap:20px}
+ .game-shot-tabs button{padding-inline:18px}
+ .game-shot-panel figcaption{align-items:flex-start;flex-direction:column;gap:12px}
+}
+@media(max-width:760px){
+
+ .game-hero-impact .game-hero-status{position:relative;top:auto;left:auto;right:auto;padding:14px 6%;gap:12px;background:#0b151f}
+ .game-hero-status>p{font-size:10px;letter-spacing:.1em}
+ .game-hero-status .game-badges{gap:7px;border:0;padding:0;background:none;font-size:10px;letter-spacing:0}
+ .game-hero-status .game-status{font-size:11px;padding:4px 7px}
+ .game-hero-impact .game-hero-visual:after{background:linear-gradient(180deg,transparent 55%,#080e15 100%)}
+ .game-hero-impact .game-hero-visual figcaption{display:none}
+ .game-page.site-refresh .game-hero-impact .game-hero-copy{display:block;margin-top:-24px;padding:0 6% 26px}
+ .game-page.site-refresh .game-hero-impact .game-series{font-size:16px;letter-spacing:.15em;margin:0 0 11px}
+ .game-page.site-refresh .game-hero-impact h1{font-size:clamp(58px,15vw,104px);line-height:.91;letter-spacing:.02em}
+ .game-hero-impact .game-genre{font-size:9px;letter-spacing:.15em;margin-top:17px}
+ .game-pitch{margin-top:27px;padding-top:23px;border-top:1px solid #38525f}
+ .game-page.site-refresh .game-hero-impact .game-catch{font-size:27px;margin-bottom:13px;line-height:1.6}
+ .game-page.site-refresh .game-hero-impact .game-lead{font-size:15px;line-height:1.95;margin-bottom:24px}
+ .game-hero-impact .game-actions{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+ .game-hero-impact .game-button{padding:13px 10px;font-size:13px;gap:9px}
+ .game-hero-footer{margin-inline:6%;padding:14px 0;gap:8px;flex-wrap:wrap}
+ .game-hero-footer>span{font-size:10px}
+ .game-hero-footer strong{font-size:15px;margin-left:8px}
+ .game-hero-footer>a{font-size:13px;gap:16px}
+ .game-page.site-refresh .game-spec-strip{margin-top:22px}
+ .game-page.site-refresh .game-section-nav{grid-template-columns:repeat(2,minmax(0,1fr));gap:0}
+ .game-page.site-refresh .game-section-nav a{font-size:13px;min-height:48px;padding:12px 7px;border-bottom:1px solid #344955}
+ .game-showcase-heading{display:block;margin-bottom:25px}
+ .game-showcase-heading h2{font-size:30px;line-height:1.6;letter-spacing:.04em}
+ .game-showcase-heading>p{font-size:15px;margin:17px 0 0}
+ .game-shot-tabs{grid-template-columns:repeat(2,minmax(0,1fr))}
+ .game-shot-tabs button{padding:12px 15px;min-height:72px;gap:5px;font-size:16px}
+ .game-shot-tabs button span{font-size:10px;letter-spacing:.08em}
+ .game-shot-image{padding:5px}
+ .game-image-open{right:12px;bottom:12px;min-height:36px;padding:7px 10px;font-size:11px}
+ .game-shot-panel figcaption{padding:21px 18px;gap:12px}
+ .game-shot-panel h3{font-size:20px;line-height:1.65}
+ .game-shot-panel figcaption p:not(.eyebrow){font-size:15px}
+ .game-shot-detail{font-size:14px;min-height:48px;width:100%}
+ .game-page.site-refresh .game-section-heading h2{font-size:27px}
+ .game-armory-update{margin-top:32px;padding-top:28px}
+ .game-armory-copy{grid-template-columns:1fr;gap:14px;margin-bottom:23px}
+ .game-armory-copy .eyebrow,.game-armory-copy .game-system-tags{grid-column:auto}
+ .game-armory-copy h3{font-size:26px}
+}
+@media(max-width:360px){.game-hero-status>p{max-width:110px}.game-hero-status .game-badges{flex-wrap:nowrap}.game-hero-impact .game-actions{grid-template-columns:1fr}.game-hero-impact .game-button{font-size:14px;padding-inline:15px}}
